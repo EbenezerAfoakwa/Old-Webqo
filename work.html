@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="work.css">
+
+</head>
+
+
+<nav>
+  <ul>
+    <li><a href="https://facebook.com">About</a></li>
+    <li><a href="#">Services</a></li>
+    <li><a href="#">Work</a></li>
+  </ul>
+  <div class="button">
+    <a class="btn-open" href="#"></a>
+  </div>
+</nav>
+
+<div class="content">
+  Click on hamburger to open the overlay menu
+</div>
+
+<body>
+
+
+
+
+
+
+
+
+
+  <script>
+    $(document).ready(function () {
+      $(".button a").click(function () {
+        $(".overlay").fadeToggle(200);
+        $(this).toggleClass('btn-open').toggleClass('btn-close');
+      });
+    });
+    $('.overlay').on('click', function () {
+      $(".overlay").fadeToggle(200);
+      $(".button a").toggleClass('btn-open').toggleClass('btn-close');
+      open = false;
+    });
+  </script>
+</body>
+
+</html>
